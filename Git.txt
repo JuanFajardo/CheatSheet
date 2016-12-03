@@ -42,6 +42,7 @@
 
 
 
+
 #COMMIT
 ##Commit Largo
   git commit -m
@@ -116,4 +117,7 @@
   git pull origin [Rama]
 ##Link
   git pull ssh://bett0@192.168.1.109:/home/bett0/Sistema/ [Rama]
-
+##Forzar
+  git gc
+  git reset HEAD [File]
+  git pull origin [Rama]
