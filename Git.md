@@ -5,14 +5,18 @@
   git config user.name
   git config user.email
 
-## Lista
+## Listar
 
 git config -l
 
-## Asiganar datos generales
+## Asignar datos generales
 
-git config --global user.name "Juan Fajardo"
+  git config --global user.name "Juan Fajardo"
   git config --global user.email "juanfajardo@potosi.bo"
+
+
+
+
 
 # ESTADO
 
@@ -27,6 +31,10 @@ git status -s
 ## Ver estado de Rama
 
 git status -b
+
+
+
+
 
 # AGREGAR A CABECERA
 
@@ -60,6 +68,10 @@ git rm -r \[Carpeta\]
 
 git rm -f \[Archivo\]
 
+
+
+
+
 # COMMIT
 
 ## Commit Largo
@@ -92,6 +104,10 @@ git reset --hard 0d1d7fc32
 
 git reset --soft HEAD~1
 
+
+
+
+
 # CONEXION REMOTA
 
 ## Ver conexion remota
@@ -101,6 +117,10 @@ git remote -v
 ## Cambiar la conexion remota
 
 git remote set-url origin ssh://bett0@192.168.1.109:/home/bett0/Sistema/
+
+
+
+
 
 # CAMBIOS DEL PROYECTO
 
@@ -116,11 +136,19 @@ git diff --name-only \[ARCHIVo\]
 
 git diff --name-status \[ARCHIVo\]
 
+
+
+
+
 # ENVIAR CAMBIOS\(PUSH\)
 
 ## Enviar cambios
 
 git push origin \[Rama\]
+
+
+
+
 
 # RAMAS
 
@@ -157,6 +185,10 @@ git merge \[Rama\]
 ### Simple con Master
 
 git merge master
+
+
+
+
 
 # DESCARGAR CAMBIOS \(PULL\)
 
