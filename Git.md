@@ -2,8 +2,8 @@
 
 ## Ver Nombre, Email
 
-  git config user.name
-  git config user.email
+git config user.name
+git config user.email
 
 ## Listar
 
@@ -11,8 +11,8 @@ git config -l
 
 ## Asignar datos generales
 
-  git config --global user.name "Juan Fajardo"
-  git config --global user.email "juanfajardo@potosi.bo"
+git config --global user.name "Juan Fajardo"
+git config --global user.email "juanfajardo@potosi.bo"
 
 
 
