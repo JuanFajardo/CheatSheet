@@ -2,15 +2,15 @@
 
 ## Activar Graph
 
-
-
-Creación de una aplicación Facebook
+**Creación de una aplicación Facebook, mas el Token de ingreso.**
 
 [https://developers.facebook.com/tools/explorer/](https://developers.facebook.com/tools/explorer/)
 
-[https://graph.facebook.com/search?q='photos'&local=en\_GB&limit=50&access\_token=CAACEdEose0cBAFGldO14fXa6gZCyFKrZBJimWIwYddClmSb2olEaCCMEawboUZCpJEG8L1TNw30QLuJkqTET7cezXgujkrEt0Sfsh8d9eY5jeg0ihuCmZAS8AqdZC36onHUAhUYtRQIkVYMS8nHm6TVtBZC9H1Q7nLXzsd9P5mieuOyfqKgBO2o8aZAG2qWjmjGr6kxHE6BTZCV8SfDLxuo0](https://graph.facebook.com/search?q='photos'&local=en_GB&limit=50&access_token=CAACEdEose0cBAFGldO14fXa6gZCyFKrZBJimWIwYddClmSb2olEaCCMEawboUZCpJEG8L1TNw30QLuJkqTET7cezXgujkrEt0Sfsh8d9eY5jeg0ihuCmZAS8AqdZC36onHUAhUYtRQIkVYMS8nHm6TVtBZC9H1Q7nLXzsd9P5mieuOyfqKgBO2o8aZAG2qWjmjGr6kxHE6BTZCV8SfDLxuo0)
 
-1. View photos of friends, or even strangers
+
+## Busquedas en Graph por Facebook
+
+1. Ver fotos de amigos y desconocidos.
 
    Photos of my friends  
     Photos of my friends of friends taken in \[Place\]  
@@ -22,7 +22,7 @@ Creación de una aplicación Facebook
     Photos of \[Person A\] liked by \[Person B\]  
     Photos of \[Person A\] AND \[Person B\]
 
-2. Find new places to eat, visit.
+2. Buscar nuevo lugares para comer, visitar.
 
    Restaurants nearby liked by my friends  
     \[Cuisine\] Restaurants liked by my friends of friends in \[City\]  
@@ -32,7 +32,7 @@ Creación de una aplicación Facebook
     Places in \[City\] visited by people who live nearby
 
 
-1. Know your followers.
+1. Conocer a los que te siguen.
 
    People who follow me  
     People who follow me and like \[Page Name\]  
@@ -41,7 +41,7 @@ Creación de una aplicación Facebook
     People who follow me and were born in \[Year\]  
     Friends of friends who follow me
 
-2. Grow your network
+2. Hacer crecer tu red
 
    People I may know  
     People who live nearby and like \[Interest Topic\]  
@@ -56,7 +56,7 @@ Creación de una aplicación Facebook
     People who studied \[Subject\] at \[College\] in \[Year\]  
     People who are not my friends and went to \[School\] in \[Year\]
 
-3. Find someone on Facebook.
+3. Buscar a quien sea en Facebook.
 
    People who work nearby  
     People who are \[Profession Name\] \(like Doctors, Programmers, etc.\)  
@@ -70,7 +70,7 @@ Creación de una aplicación Facebook
     People who work at \[Company A\] and previously worked at \[Company B\]
 
 
-1. Track your Facebook Activity
+1. Sigue tu actividad a detalle
 
    My favorite pages  
     My favorite music  
@@ -81,7 +81,7 @@ Creación de una aplicación Facebook
     Places nearby I visited  
     Games I like
 
-2. Discover things you may like.
+2. Cosas que te pueden gustar.
 
    Music \(or Games or Movies\) I may like  
     Books liked by people who like \[Author Name\]  
@@ -91,7 +91,7 @@ Creación de una aplicación Facebook
     Apps used by my friends  
     Apps people who live nearby use
 
-3. What’s happening around you?
+3. Que pasa alrededror tuyo?
 
    Events nearby  
     Local events this weekend  
