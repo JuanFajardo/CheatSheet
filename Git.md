@@ -54,6 +54,10 @@ git add Carpeta/Carpeta1/.
 
 git reset HEAD \[Archivo\]
 
+## Remover un archivo del stage
+
+git checkout -- \[Archivo\]
+
 ## Eliminar
 
 ### Del repositorio
