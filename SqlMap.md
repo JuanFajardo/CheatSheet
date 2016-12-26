@@ -4,7 +4,7 @@ Sqlmap is an open source penetration testing tool that automates the process of 
 
 ## Wiki
 
-https://github.com/sqlmapproject/sqlmap/wiki/Usage
+[https://github.com/sqlmapproject/sqlmap/wiki/Usage](https://github.com/sqlmapproject/sqlmap/wiki/Usage)
 
 ## Comandos de reconocimiento
 
@@ -14,7 +14,11 @@ https://github.com/sqlmapproject/sqlmap/wiki/Usage
 
 **Ver informacion del SGBD**
 
- **`python sqlmap.py -u "http://sqli.com/?id=1" -b`**
+**`python sqlmap.py -u "http://sqli.com/?id=1" -b`**
+
+**Si encuentra un error dar un BEEP**
+
+**`python sqlmap.py -u "http://sqli.com/?id=1&col=2&cod=2" --beep`**
 
 **Verificar SQLI en metodo GET**
 
@@ -38,7 +42,7 @@ https://github.com/sqlmapproject/sqlmap/wiki/Usage
 
 **`python sqlmap.py -u "http://sqli.com/?id=1" --random-agent -b`**
 
-**Especifico \(http://www.user-agents.org/\)**
+**Especifico \(**[http://www.user-agents.org/\](http://www.user-agents.org/\)**\)**
 
 **`python sqlmap.py -u "http://sqli.com/?id=1" --cookie="PHPSESSID=ghd8jkmb7e89iv42f2j9er7kd5" -b`**
 
@@ -48,7 +52,11 @@ https://github.com/sqlmapproject/sqlmap/wiki/Usage
 
 ## Comandos de explotacion
 
+**Verificar SQLI con GET usando un PROXY**
 
+**`python sqlmap.py -u "http://sqli.com/?id=1" --proxy="127.0.0.1:8089" -b`**
+
+## 
 
 
 
