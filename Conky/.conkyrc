@@ -1,0 +1,126 @@
+# Use Xft?
+use_xft yes
+xftfont DejaVu Sans:size=8
+xftalpha 0.8
+text_buffer_size 2048
+color0 8e8e8e
+color1 FCAF3E
+color2 FFFFFF
+
+# Update interval in seconds
+update_interval 1
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Create own window instead of using desktop (required in nautilus)
+own_window yes
+own_window_transparent yes
+own_window_type normal
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# Minimum size of text area
+minimum_size 10 1050
+#maximum_width 800
+
+# Draw shades?
+draw_shades no
+
+# Draw outlines?
+draw_outline no
+
+# Draw borders around text
+draw_borders no
+
+# Stippled borders?
+stippled_borders 0
+
+# border margins
+border_margin 0
+
+# border width
+border_width 0
+
+# Default colors and also border colors
+default_color white
+#default_shade_color black
+#default_outline_color white
+#own_window_colour white
+
+# Text alignment, other possible values are commented
+#alignment top_left
+alignment top_right
+#alignment bottom_left
+#alignment bottom_right
+
+# Gap between borders of screen and text
+# same thing as passing -x at command line
+gap_x 5
+gap_y 0
+
+# Subtract file system buffers from used memory?
+no_buffers no
+
+# set to yes if you want all text to be in uppercase
+uppercase no
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# number of net samples to average
+# set to 1 to disable averaging
+net_avg_samples 2
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale yes
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+use_spacer none
+
+TEXT
+$alignc ${exec /usr/bin/whoami} @ $nodename
+${hr 2}
+${alignc 35}${font Arial Black:size=26}${time %H:%M}${font}
+${alignc}${time %A %d.%m.%Y}
+
+SISTEMA ${hr 2}
+${voffset 2}${font OpenLogos:size=16}J${font}  Debian Lenny:  ${alignr}${exec /bin/cat /etc/debian_version}
+${voffset 2}${font OpenLogos:size=16}t${font}  Kernel:  ${alignr}${kernel}
+${font StyleBats:size=16}A${font}  CPU1: ${cpu cpu1}% ${alignr}${cpubar cpu1 8,60}
+${font StyleBats:size=16}A${font}  CPU2: ${cpu cpu2}% ${alignr}${cpubar cpu2 8,60}
+${font StyleBats:size=16}k${font}  RAM: $memperc% ${alignr}${membar 8,60}
+${font Webdings:size=16}q${font}  SWAP: $swapperc% ${alignr}${swapbar 8,60}
+${font Webdings:size=16}a${font}  Up time: ${alignr}${uptime}
+
+HD ${hr 2}
+${voffset 4}${font Pie charts for maps:size=14}7${font}   ${voffset -5}Debian: $alignr ${fs_used_perc /}%
+${voffset 4}${fs_used /} / ${fs_size /} ${alignr}${fs_bar 8,60 /}
+${font Pie charts for maps:size=14}7${font}   ${voffset -5}Windows: $alignr ${fs_used_perc /media/windows}%
+${voffset 4}${fs_used /media/windows} / ${fs_size /media/windows} ${alignr}${fs_bar 8,60 /media/windows}
+${font Pie charts for maps:size=14}7${font}   ${voffset -5}Arquivos: $alignr ${fs_used_perc /media/arquivos}% 
+${voffset 4}${fs_used /media/arquivos} / ${fs_size /media/arquivos} ${alignr}${fs_bar 8,60 /media/arquivos}
+${if_mounted /media/cdrom0}${font WarnerLogoFontNine:size=14}c${font}   ${voffset -5}CDROM: $alignr ${fs_used_perc /media/cdrom0}%
+${voffset 4}${fs_used /media/cdrom0} / ${fs_size /media/cdrom0} ${alignr}${fs_bar 8,60 /media/cdrom0}$endif${if_mounted /media/disk}${font StyleBats:size=16}h${font}   ${voffset -5}Sony Ericsson K750i: $alignr ${fs_used_perc /media/disk}% 
+${voffset 4}${fs_used /media/disk} / ${fs_size /media/disk} ${alignr}${fs_bar 8,60 /media/disk}$endif
+REDE ${hr 2}
+${voffset 4}${font StyleBats:size=14}p${font}   Ip Local: ${alignr}${execi 600 /usr/bin/wget -q -O - checkip.dyndns.org | sed -e 's/[^[:digit:]\|.]//g'}
+${voffset 4}${font PizzaDude Bullets:size=14}T${font}   Download: ${alignr}${downspeed eth0} kb/s 
+${voffset 4}${font PizzaDude Bullets:size=14}U${font}   Downloaded: ${alignr}${totaldown eth0}
+
+
+${hr 2}
+
+${font DejaVu Sans:pixelsize=10}${alignc}${execi 60 date +"%B %Y" | tr "[:lower:]" "[:upper:]"}${font Snap.se:size=8 }${font}
+${font DejaVu Sans Mono:size=10}${execpi 60 cal | sed '1d' | sed '3d' | sed '2d' | sed '2d' | sed '2d' | sed '2d' | sed '2d' | sed 's/^/${alignc} /'}${font} 
+${font DejaVu Sans Mono:size=10}${color0}${execpi 60 DJS=`date +%_d`; cal | sed '1d' | sed '/./!d' | sed 's/$/                    /' | fold -w 21 | sed -n '/^.\{21\}/p' | sed 's/^/${alignc} /' | sed /" $DJS "/s/" $DJS "/" "'${color1}'"$DJS"'${color2}'" "/}${font}
+${hr 2}
+
+
+
+        ${voffset 2}${font OpenLogos:size=200}J${font}
+             ${alignc}Debian Lenny ${exec /bin/cat /etc/debian_version}
