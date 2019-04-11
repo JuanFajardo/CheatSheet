@@ -164,6 +164,8 @@ git mergetool
 ## Origin
 git pull origin \[Rama\]
 
+git pull origin \[Rama\] --allow-unrelated-historie
+
 ## Link
 git pull ssh://bett0@192.168.1.109:/home/bett0/Sistema/ \[Rama\]
 
