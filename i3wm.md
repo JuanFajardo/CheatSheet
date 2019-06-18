@@ -1,8 +1,12 @@
 # i3wm
 
-~~~# apt update~~~
 
-~~~# apte install i3~~~
+Actualizar el repositorio en Debian e instalar el gestor de ventanas i3
+
+```# apt update```
+
+```# apte install i3```
+
 
 Los siguientes comandos estan basados en el default de la instalacion de i3.
 
