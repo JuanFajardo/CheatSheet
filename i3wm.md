@@ -1,58 +1,62 @@
-i3wm
+# i3wm
 
-# apt update
-# apte install i3
+```# apt update```
+```# apte install i3```
 
-Cerrar sesion
+Los siguientes comandos estan basados en el default de la instalacion de i3.
 
-[ ENTER | YES ]
+__Iniciar sesion__
+```[ ENTER | YES ]```
 
-cerrar
-[ win+shift+qq ]
+__Cerrar Ventana__
+```[ $mod + shift + qq ]```
 
-abir
-[ win + d ]
+__Abir Aplicacion__
+```[ $mod + d ]```
 
-Abrir la terminal
-[ win + Enter]
+__Abrir la terminal__
+```[ $mod + Enter ]```
 
-Abrir la terinal vertical
-[ win + v + Enter]
+__Abrir la terinal vertical__
+```[ $mod + v + Enter ]```
 
-Abrir la terminal horizontal
-[ win + h + Enter]
+__Abrir la terminal horizontal__
+```[ $mod + h + Enter ]```
 
-Movere de una ventana a otra
-[ win + Flechas ]
+__Movere de una ventana a otra__
+```[ $mod + Flechas  ]```
 
-Pantalla completa la ventana seleccionada
-[ win + s ]
+__Pantalla completa la ventana seleccionada__
+```[ $mod + s  ]```
 
-Pantalla Dividida 
-[ win + e ]
+__Pantalla Dividida__
+```[ $mod + e  ]```
 
-Listar en la barra
-[ win + w ]
+__Listar en la barra__
+```[ $mod + w  ]```
 
-redimensionar
-[ win + r]
+__Redimensionar__
+```[ $mod + r ]```
 
-mover la ventana
-[ win + shitf + fle chas]
+__Mover la aplicacion__
+```[ $mod + shift + flechas ]```
 
-mover de area de trabajo
-[ win + shitf + numeros]
+__Mover de area de trabajo__
+```[ $mod + shift + numeros ]```
 
-cerrar sesion
-[ win + shitf + e ]
+__Cerrar Sesion__
+```[ $mod + shift + e  ]```
 
-Bloquear Pantalla
-$ i3lock -i fondo.png
-$ i3lock -t fondo.png -b -f
+__Reiniciar i3__
+```[ $mod + Shift + r  ]```
 
-=====================================
-Configuracion
+__Bloquear Pantalla__
+```$ i3lock -i fondo.png```
+```$ i3lock -t fondo.png -b -f```
 
+## Configuracion
+
+__Comando para crear el archivo de configuración__
 $ i3-config-wizard
 $ nano $HOME/.i3/config
 $ nano $HOME/.config/i3/config
@@ -60,8 +64,6 @@ $ nano $HOME/.config/i3/config
 $vim $HOME/.config/i3/config
 bindsym $mod+shift+x exec i3lock
 
-Riniciar i3
-[ win + shift + r ]
 
 $vim $HOME/.config/i3/config
 https://faq.i3wm.org/question/3747/enabling-multimedia-keys/?answer=3759#post-id-3759
@@ -113,35 +115,5 @@ set $workName "nombre LOGOFIREFOX"
 
 
 =============================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
