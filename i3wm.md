@@ -1,56 +1,87 @@
 # i3wm
 
-```# apt update```
-```# apte install i3```
+~~~# apt update~~~
+
+~~~# apte install i3~~~
 
 Los siguientes comandos estan basados en el default de la instalacion de i3.
 
+
 __Iniciar sesion__
+
 ```[ ENTER | YES ]```
 
+
 __Cerrar Ventana__
+
 ```[ $mod + shift + qq ]```
 
+
 __Abir Aplicacion__
+
 ```[ $mod + d ]```
 
+
 __Abrir la terminal__
+
 ```[ $mod + Enter ]```
 
+
 __Abrir la terinal vertical__
+
 ```[ $mod + v + Enter ]```
 
+
 __Abrir la terminal horizontal__
+
 ```[ $mod + h + Enter ]```
 
+
 __Movere de una ventana a otra__
+
 ```[ $mod + Flechas  ]```
 
+
 __Pantalla completa la ventana seleccionada__
+
 ```[ $mod + s  ]```
 
+
 __Pantalla Dividida__
+
 ```[ $mod + e  ]```
 
+
 __Listar en la barra__
+
 ```[ $mod + w  ]```
 
 __Redimensionar__
+
 ```[ $mod + r ]```
 
+
 __Mover la aplicacion__
+
 ```[ $mod + shift + flechas ]```
 
 __Mover de area de trabajo__
+
 ```[ $mod + shift + numeros ]```
 
+
 __Cerrar Sesion__
+
 ```[ $mod + shift + e  ]```
 
+
 __Reiniciar i3__
+
 ```[ $mod + Shift + r  ]```
 
+
 __Bloquear Pantalla__
+
 ```$ i3lock -i fondo.png```
 ```$ i3lock -t fondo.png -b -f```
 
