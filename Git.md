@@ -1,66 +1,84 @@
 # Git
 
 
-__Nombre de Usuario y Correo__
-
+__Ver usuario y correo__
 ```git
 git config user.name
 git config user.email
 ```
 
-__Listar__
 
+__Asignar Usuario y Correo__
+```git
+git config --global user.name "Juan Fajardo"
+git config --global user.email "juanfajardo@potosi.bo"
+```
+
+__Listar__
 ```git
 git config -l
 ```
 
-## Asignar datos generales
-git config --global user.name "Juan Fajardo"
-git config --global user.email "juanfajardo@potosi.bo"
 
 
 
-# ESTADO
-## Ver estado
+## ESTADO
+
+__Ver estado__
+```git
 git status
+```
 
-## Ver estado corto
+__Ver estado corto__
+```git
 git status -s
+```
 
-## Ver estado de Rama
+__Ver estado de Rama__
+```git
 git status -b
+```
 
+## AGREGAR A CABECERA
 
-
-
-
-# AGREGAR A CABECERA
-
-## Todo
+__Todo__
+```git
 git add .
+```
 
-## Un archivo
+__Un archivo__
+```git
 git add \[File\]
+```
 
-## Una carpeta
+__Una carpeta__
+```git
 git add Carpeta/Carpeta1/.
+```
 
-## Remover de cabecera
+__Remover de cabecera__
+```git
 git reset HEAD \[Archivo\]
+```
 
-## Remover un archivo del stage
+__Remover un archivo del stage__
+```git
 git checkout -- \[Archivo\]
+```
 
 ## Eliminar
 ### Del repositorio
+```git
 git rm \[Archivo\]
-
+```
 ### Eliminar Recursivo
+```git
 git rm -r \[Carpeta\]
-
+```
 ### Eliminar Forzado
+```git
 git rm -f \[Archivo\]
-
+```
 
 
 
