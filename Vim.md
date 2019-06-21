@@ -103,19 +103,16 @@ __Finalizar guardar y salir__
 ## Modo Insertar
 
 __Insertar__
+> ```i``` Insertar en el cursor
+> ```I``` Inserta al inicio de la linea
+> ```10i Esc + Enter``` Insertar 10 lineas
+> ```10i PALABRA Esc``` Insertar 10 veces PALABRA
+> ```a``` Insertar despues del cursor
+> ```A``` Insertar al final del linea
+> ```O``` Insertar linea blanca antes de la linea actual
+> ```o``` Insertar linea blanca despues de la linea actual
 
-I 
-a insertar despues del cursor
-A insertar al final del linea
-O insertar linea blanca antes de la linea actual
-o insertar linea blanca despues de la linea actual
 
-
-|----|---------------------------------|
-|i   |Insertar en el cursos            |
-|I   |Inserta al inicio de la line     |
-|10i |Esc + Enter insertar 10 lineas   |
-|10i |PALABRA Esc insertar 10 lineas   |
 
 AltGr + 4 Cambiar de Mayuscula a Miniscula y viceversa
 
