@@ -104,12 +104,19 @@ __Finalizar guardar y salir__
 
 __Insertar__
 > ```i``` Insertar en el cursor
+
 > ```I``` Inserta al inicio de la linea
+
 > ```10i Esc + Enter``` Insertar 10 lineas
+
 > ```10i PALABRA Esc``` Insertar 10 veces PALABRA
+
 > ```a``` Insertar despues del cursor
+
 > ```A``` Insertar al final del linea
+
 > ```O``` Insertar linea blanca antes de la linea actual
+
 > ```o``` Insertar linea blanca despues de la linea actual
 
 
