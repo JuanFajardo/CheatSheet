@@ -87,19 +87,13 @@ __Sustituir todo con confirmacion__
 
 ```:%s/Antiguo/Nuevo/gc```
 
-```* y si```
-
-```* n no```
-
-```* a todo```
-
-```* q parar sustituir```
-
-```* l salir```
-
-```* Ctrl+e AvPag```
-
-```* Ctrl+y RePag```
+*```y si```
+*```n no```
+*```a todo```
+*```q parar sustituir```
+*```l salir```
+*```Ctrl+e AvPag```
+*```Ctrl+y RePag```
 
 __Finalizar guardar y salir__
 
