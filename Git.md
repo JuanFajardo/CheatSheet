@@ -3,22 +3,21 @@
 
 __Ver usuario y correo__
 ```git
-git config user.name
-git config user.email
+$ git config user.name
+$ git config user.email
 ```
 
 
 __Asignar Usuario y Correo__
 ```git
-git config --global user.name "Juan Fajardo"
-git config --global user.email "juanfajardo@potosi.bo"
+$ git config --global user.name "Juan Fajardo"
+$ git config --global user.email "juanfajardo@potosi.bo"
 ```
 
 __Listar__
 ```git
-git config -l
+$ git config -l
 ```
-
 
 
 
@@ -26,175 +25,218 @@ git config -l
 
 __Ver estado__
 ```git
-git status
+$ git status
 ```
 
 __Ver estado corto__
 ```git
-git status -s
+$ git status -s
 ```
 
 __Ver estado de Rama__
 ```git
-git status -b
+$ git status -b
 ```
 
 ## AGREGAR A CABECERA
 
 __Todo__
 ```git
-git add .
+$ git add .
 ```
 
 __Un archivo__
 ```git
-git add \[File\]
+$ git add \[File\]
 ```
 
 __Una carpeta__
 ```git
-git add Carpeta/Carpeta1/.
+$ git add Carpeta/Carpeta1/.
 ```
 
 __Remover de cabecera__
 ```git
-git reset HEAD \[Archivo\]
+$ git reset HEAD [Archivo]
 ```
 
 __Remover un archivo del stage__
 ```git
-git checkout -- \[Archivo\]
+$ git checkout -- [Archivo]
 ```
 
 ## Eliminar
-### Del repositorio
+__Del repositorio__
 ```git
-git rm \[Archivo\]
-```
-### Eliminar Recursivo
-```git
-git rm -r \[Carpeta\]
-```
-### Eliminar Forzado
-```git
-git rm -f \[Archivo\]
+$ git rm [Archivo]
 ```
 
+__Eliminar Recursivo__
+```git
+$ git rm -r [Carpeta]
+```
+
+__Eliminar Forzado__
+```git
+$ git rm -f [Archivo]
+```
 
 
 
-# COMMIT
-## Commit Largo
-git commit -m
+## COMMIT
 
-## Commit Corto
-git commit -m "Nombre - Mensaje"
+__Commit Largo__
+```git
+$ git commit -m
+```
 
-## Listar los cambios
-git log --oneline
+__Commit Corto__
+```git
+$ git commit -m "Nombre - Mensaje"
+```
 
-### Cambiar el ultimo commit
-git commit --amend
+__Listar los cambios__
+```git
+$ git log --oneline
+```
 
-### Temporal
-git checkout 0d1d7fc32
+__Cambiar el ultimo commit__
+```git
+$ git commit --amend
+```
 
-### Forzado
-git reset --hard 0d1d7fc32
+__Temporal__
+```git
+$ git checkout 0d1d7fc32
+```
 
-### Deshacer el ultimo commit
-git reset --soft HEAD~1
-git reset --merge
+__Forzado__
+```git
+$ git reset --hard 0d1d7fc32
+```
 
-
-
-
-# CONEXION REMOTA
-## Ver conexion remota
-git remote -v
-
-## Agregar la conexion remota
-git remote add origin ssh://bett0@192.168.1.109:/home/bett0/Sistema/
-
-## Cambiar la conexion remota
-git remote set-url origin ssh://bett0@192.168.1.109:/home/bett0/Sistema/
-
-
-
-
-
-# CAMBIOS DEL PROYECTO
-## Ver todo
-git diff \[Archivo\]
-
-## Ver un archivo
-git diff --name-only \[ARCHIVo\]
-
-## Ver estado stage/head
-git diff --name-status \[ARCHIVo\]
-
+__Deshacer el ultimo commit__
+```git
+$ git reset --soft HEAD~1
+$ git reset --merge
+```
 
 
 
 
-# ENVIAR CAMBIOS\(PUSH\)
-## Enviar cambios
-git push origin \[Rama\]
+## CONEXION REMOTA
+
+__Ver conexion remota__
+```git
+$ git remote -v
+```
+
+__Agregar la conexion remota__
+```git
+$ git remote add origin ssh://bett0@192.168.1.109:/home/bett0/Sistema/
+```
+
+__Cambiar la conexion remota__
+```git
+$ git remote set-url origin ssh://bett0@192.168.1.109:/home/bett0/Sistema/
+```
+
+
+
+## CAMBIOS DEL PROYECTO
+
+__Ver todo__
+```git
+$ git diff [Archivo]
+```
+
+__Ver un archivo__
+```git
+$ git diff --name-only [Archivo]
+```
+
+__Ver estado stage/head__
+```git
+$ git diff --name-status [Archivo]
+```
+
+
+## ENVIAR CAMBIOS (PUSH)
+
+__Enviar cambios__
+```git
+$ git push origin [Rama]
+```
 
 
 
 
+## RAMAS
 
-# RAMAS
-## Crear rama
-git branch \[Rama\]
 
-## Elminar rama sin perder nada
-git branch -d \[Rama\]
+__Crear rama__
+```git
+$ git branch [Rama]
+```
 
-## Elminar rama como macho alfa
-git branch -D \[Rama\]
+__Elminar rama sin perder nada__
+```git
+$ git branch -d [Rama]
+```
 
-## Recolector de Basura
-git gc
+__Elminar rama como macho alfa__
+```git
+$ git branch -D [Rama]
+```
 
-## Verificar rama
-git branch
+__Recolector de Basura__
+```git
+$ git gc
+```
 
-## Cambiando rama
-git checkout \[Rama\]
+__Ver ramas__
+```git
+$ git branch
+```
+
+__Cambiando rama__
+```git
+$ git checkout [Rama]
+```
+
 
 ## Fusionar/Merge
-### Simple con Rama
-git merge \[Rama\]
 
-### Simple con Master
-git merge master
+__Simple con Rama__
+```git
+$ git merge [Rama]
+```
 
-### Instalando Meld
-PATH=$PATH:/c/python26
-git config --global merge.tool meld
-git config --global mergetool.meld.path /c/Users/andarno/Downloads/meld-1.5.2/bin/meld
+__Simple con Master__
+```git
+$ git merge master
+```
+__Instalando Meld__
+```git
+$ PATH=$PATH:/c/python26
+$ git config --global merge.tool meld
+$ git config --global mergetool.meld.path /c/Users/andarno/Downloads/meld-1.5.2/bin/meld
+```
 
-### difftool cuando queramos ver la diferencia entre ramas
-git difftool  \[Rama\]
+__Ver la diferencia entre ramas__
+```git
+$ git difftool  [Rama]
+```
+__Merge con las modificaciones necesarias__
+```git
+$ git mergetool
+```
 
-### mergetool cuando queramos hacer el merge con las modificaciones necesarias
-git mergetool
 
+## DESCARGAR CAMBIOS (PULL)
+__Origin__
+```git
+$ git pull origin [Rama]
+$ git pull origin [Rama] --allow-unrelated-historie
+```
 
-
-
-# DESCARGAR CAMBIOS \(PULL\)
-## Origin
-git pull origin \[Rama\]
-
-git pull origin \[Rama\] --allow-unrelated-historie
-
-## Link
-git pull ssh://bett0@192.168.1.109:/home/bett0/Sistema/ \[Rama\]
-
-## Forzar
-git gc
-git reset HEAD \[File\]
-git pull origin \[Rama\]
