@@ -1,11 +1,18 @@
-# DATOS GENERALES
+# Git
 
-## Ver Nombre, Email
+
+__Nombre de Usuario y Correo__
+
+```git
 git config user.name
 git config user.email
+```
 
-## Listar
+__Listar__
+
+```git
 git config -l
+```
 
 ## Asignar datos generales
 git config --global user.name "Juan Fajardo"
