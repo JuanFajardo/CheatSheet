@@ -19,6 +19,19 @@ __Crear una Base de Datos__
 
 ```> create database baseDatos;```
 
+__Crear una Tabla__
+
+```>  create table autor(id int primary key auto_increment, autor varchar(50));```
+
+```> insert into autor values('', 'Julio Verne');```
+
+```> select * from autor;```
+
+__Crear una Tabla con Cable Foreanea__
+
+```>  create table libro( id  int primary key auto_increment, libro varchar(50), autor_id int, foreign key (autor_id) references autor(id_autor) );```
+
+
 
 ## Usuarios
 
@@ -26,7 +39,22 @@ __Crear un usuario__
 
 ```> CREATE USER 'bett0'@'localhost' IDENTIFIED BY '123';```
 
-__Asigna a un usuario límites__
+
+__Privilegio a nivel de base de datos__
+
+```> grant select,insert,update on db.* to bett0@'192.168.70.60' identified by '123';```
+
+__Privilegio a nivel de tabla__
+
+```> grant select on db.libro to bett1@'%'  identified by '123';```
+
+__Privilegio a nivel de columna__
+
+```> grant update(autor) on db.autor to bett2@'localhost' identified by '123';```
+
+
+
+__Asignar a un usuario límites__
 
 ```> GRANT ALL ON test.* TO 'prueba'@'localhost'```
        ```WITH MAX_QUERIES_PER_HOUR 100```
