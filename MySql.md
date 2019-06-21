@@ -13,7 +13,9 @@ __mysqladmin__	Es una utilidad de mantenimiento o administracion
 
 __Mostrar Base de Datos__
 
-```> show databases;```
+```sql
+> show databases;
+```
 
 __Crear una Base de Datos__
 
@@ -56,11 +58,13 @@ __Privilegio a nivel de columna__
 
 __Asignar a un usuario límites__
 
-```> GRANT ALL ON test.* TO 'prueba'@'localhost'```
-       ```WITH MAX_QUERIES_PER_HOUR 100```
-            ```MAX_UPDATES_PER_HOUR 50```
-            ```MAX_CONNECTIONS_PER_HOUR 100```
-            ```MAX_USER_CONNECTIONS 20;```
+```sql
+> GRANT ALL ON test.* TO 'prueba'@'localhost'
+       WITH MAX_QUERIES_PER_HOUR 100
+       MAX_UPDATES_PER_HOUR 50
+       MAX_CONNECTIONS_PER_HOUR 100
+       MAX_USER_CONNECTIONS 20;
+```
 
 __Modificar límites de un usuario__
 
