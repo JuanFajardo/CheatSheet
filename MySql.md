@@ -1,19 +1,15 @@
 # MySQL
 
 
-El executable del servidor
+__mysqld__ 	El executable del servidor
 
-__mysqld__ 
+__mysql__	Es la linea de comandos del cliente
 
-Es la linea de comandos del cliente
+__mysqladmin__	Es una utilidad de mantenimiento o administracion
 
-__mysql__
 
-Es una utilidad de mantenimiento o administracion
 
-__mysqladmin__
-
-### Basico
+## Basico
 
 __Mostrar Base de Datos__
 
@@ -24,7 +20,7 @@ __Crear una Base de Datos__
 ```> create database baseDatos;```
 
 
-### Usuarios
+## Usuarios
 
 __Crear un usuario__
 
@@ -45,6 +41,7 @@ __Modificar límites de un usuario__
 
 
 __Eliminar un límite (poner a 0)__
+
 ```> grant usage on *.* to 'bett0'@'localhost' with max_queries_per_hour 0;```
 
 __Poner a 0 los contadores a nivel general__
@@ -53,7 +50,11 @@ __Poner a 0 los contadores a nivel general__
 
 ```> flush privileges;```
 
-__Resetear contraseña de mysql__
+
+
+## Reset 
+
+__Resetear contraseña de mysql Windows__
 
 ```$ mysqld_safe --skip-grant-tables &```
 
@@ -61,13 +62,18 @@ __Resetear contraseña de mysql__
 
 ```> update user SET password=PASSWORD("123") WHERE user="root"; $ FLUSH PRIVILEGES;```
 
+
+
 ### Exportar e Importar
 
 __Exportar Base Datos__
+
 ```$ mysqldump -u bett0 -p  -h 192.168.1.69 [db] > archivo.sql ```
 
 __Importar A una base de datos__
+
 ```$ mysql -u bett0 -p  -h 192.168.1.69 [db] < archivo.sql```
+
 
 
 ## Mysql Errores 
