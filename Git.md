@@ -131,6 +131,24 @@ __Ver conexion remota__
 $ git remote -v
 ```
 
+__Ver informacion__
+```git
+$ git config --list
+```
+
+
+__Ver Nombre__
+```git
+$ git config user.name
+```
+
+
+__Ver Correo__
+```git
+$ config user.name
+```
+
+
 __Agregar la conexion remota__
 ```git
 $ git remote add origin ssh://bett0@192.168.1.109:/home/bett0/Sistema/
