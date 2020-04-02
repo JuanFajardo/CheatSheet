@@ -65,6 +65,14 @@ __Remover un archivo del stage__
 $ git checkout -- [Archivo]
 ```
 
+__Refresacar archivo Git Ignore__
+```git
+$ git rm -r --cached .
+$ git add .
+$ git commit -m "GitIgnore Refresacado" 
+```
+
+
 ## Eliminar
 __Del repositorio__
 ```git
