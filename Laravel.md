@@ -51,6 +51,30 @@ $ composer install
 # systemctl restart mysql
 ```
 
+
+## Instalacion de Base de Datos PostgreSQL
+
+```bash
+# apt install postgresql-server postgresql-client pgadmin3
+```
+
+### Configuracion basica de PostgreSQL
+
+```bash
+# su postgres
+$ psql -U postgres -W
+```
+
+```sql
+> \password postgres
+> CREATE DATABASE basedatos;
+```
+
+```bash
+# systemctl restart postgresql
+```
+
+
 ## Composer
 
 ```bash
