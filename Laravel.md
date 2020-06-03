@@ -274,8 +274,14 @@ __Link__
 
 ## HTML
 ### Instalacion
-  composer require "laravelcollective/html":"^5.2.0"
 
+```bash
+$ composer require laravelcollective/html
+```
+
+```bash
+$ composer require "laravelcollective/html":"^5.2.0"
+```
 ### config/app.php
 
 __Providers__
