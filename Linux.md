@@ -15,3 +15,11 @@ __ranger__ Explorador de archivos desde la terminal.
 __screenfetch__ La herrameinta de en Bash para visualizar una pantallazo.
 
 __feh__ Para poner un wallpaper
+
+__figlet__ Para convertir un texto en ASCII
+
+__htop__ Visor de proceso interactivo
+
+__iftop__ Visor interactivo de la conexion de red
+
+__apachetop__ Visor interactivo de la conexion de apache
