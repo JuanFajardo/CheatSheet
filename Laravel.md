@@ -3,11 +3,28 @@
 ## Requisitos de Librerias
 
 ```bash
-# apt install git curl php php-gd php-mbstring php-xml php-tokenizer php-mdb2 php-mysql php-pgsql
-
-# apt install php libapache2-mod-php php-mbstring php-xmlrpc php-soap php-gd php-xml php-cli php-zip
+# apt install php php-cli php-mycryp php-gd php-mysql php-pgsql php-imap php-memcached php-mbstring php-xml php-curl php-bcmatch php-xdebug php-tokenizer php-mdb2 libapache2-mod-php  php-soap php-zip
 ```
+## Programas basicos
 
+```bash
+# apt isntall -y git tmux vim curl wget zip unzip 
+```
+_
+
+
+## Instalacion de servicio HTTP
+
+__Instalacion NGINX__
+
+```bash
+# apt install ngnix php-fpm 
+```
+__Instalacion Apache__
+
+```bash
+# apt install apache2
+```
 
 ## Instalacion Laravel
 
@@ -77,6 +94,8 @@ $ psql -U postgres -W
 
 ## Composer
 
+__Instalacion paso a paso__
+
 ```bash
 # apt install curl
 $ curl -sS https://getcomposer.org/installer | php
@@ -85,7 +104,11 @@ $ curl -sS https://getcomposer.org/installer | php
 
 $ source ~/.bashrc
 $ composer -v
+```
+__Instalacion directa__
 
+```bash
+# php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --finame=composer 
 ```
 
 
@@ -95,17 +118,13 @@ $ cd laravel
 
 $ chown -R bett0.bett0 laravel
 $ chmod -R 755 laravel
-$ chmod -R 777 laravel/storage
+$ chown -R www-data: storage/ bootstrap/
 
 $ mv .env.example .env
 $ php artisan key:generate
 
 $ php artisan migrate:seed
 ```
-
-
-
-
 
 ## ARTISAN  
 
