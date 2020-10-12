@@ -20,7 +20,9 @@ postgres@localhost$ vim /etc/postgres/N.N/main/pg_hba.conf
 __Exportar Una BaseDeDatos__
 
 ```bash
-postgres@localhost$ g_dump -U bett0 -W -h loclahost baseDatos > /tmp/baseDatos.sql
+postgres@localhost$ pg_dump -U bett0 -W -h loclahost baseDatos > /tmp/baseDatos.sql
+
+postgres@localhost$ pg_dump -U bett0 -W -h 192.168.69.69 --table public.tabla baseDatos > /tmp/baseDatos.sql
 ```
 
 
@@ -32,5 +34,7 @@ postgres@localhost$ pg_dumpall -U postgres > pg_todo.sql
 __Importar BaseDeDatos__
 ```bash
 postgres@localhost$ psql -U bett0 baseDeDatos < /tmp/baseDatos.sql > pg_mibd.log 2>&1
+
+postgres@localhost$ psql -U bett0 -W -h 192.168.69.69 --table public.tabla baseDatos < /tmp/baseDatos.sql
 ```
 
