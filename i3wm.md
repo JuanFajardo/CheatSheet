@@ -51,6 +51,10 @@ __Pantalla completa la ventana seleccionada__
 ```[ $mod + s  ]```
 
 
+__Pantalla completa __
+
+```[ $mod + f  ]```
+
 __Pantalla Dividida__
 
 ```[ $mod + e  ]```
