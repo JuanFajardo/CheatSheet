@@ -3,13 +3,12 @@
 
 Actualizar el repositorio en Debian e instalar el gestor de ventanas i3
 
-```# apt update```
-
-```# apte install i3```
-
+```bash
+# apt update
+# apte install i3
+```
 
 Los siguientes comandos estan basados en el default de la instalacion de i3.
-
 
 __Iniciar sesion__
 
@@ -96,63 +95,85 @@ __Bloquear Pantalla__
 ## Configuracion
 
 __Comando para crear el archivo de configuración__
+
+```bash
 $ i3-config-wizard
+
 $ nano $HOME/.i3/config
 $ nano $HOME/.config/i3/config
+```
 
-$vim $HOME/.config/i3/config
+__Bloqueo de pantalla__
+
+```bash
+$ vim $HOME/.config/i3/config
 bindsym $mod+shift+x exec i3lock
+```
 
-
-$vim $HOME/.config/i3/config
+__Habilitar comandos de Multimedia__
+```bash
+# apt install playerctl
+$ vim $HOME/.config/i3/config
 https://faq.i3wm.org/question/3747/enabling-multimedia-keys/?answer=3759#post-id-3759
-apt install playerctl
+```
 
+__Ejecutar vlc__
 
-$vim $HOME/.config/i3/config
+```bash
+$ vim $HOME/.config/i3/config
 exec vlc
 exec_always vlc
+```
 
+__Habilitar la opacidad__
 
-apt install compton
-compton --opacity-rule 45:'class_g *= "X-terminal-emulator"'
-$vim $HOME/.config/i3/config
+```bash
+# apt install compton
+
+$ compton --opacity-rule 45:'class_g *= "X-terminal-emulator"'
+
+$ vim $HOME/.config/i3/config
 exec compton --opacity-rule 50:'class_g *= "X-terminal-emulator"'
+```
 
+__Poner Fondo de Pantalla__
 
-apt install feh
-feh --bg-scale wallpaper.jpg
-$vim $HOME/.config/i3/config
+```bash
+# apt install feh
+$ feh --bg-scale wallpaper.jpg
+
+$ vim $HOME/.config/i3/config
 exec_always feh --bg-scale $HOME./wallpaper.jpg
+```
 
+__Resolucion de Pantalla__
 
-xrandr
-apt install arandr
-arandr
-$vim $HOME/.config/i3/config
-exec_always xrandr confi.sh
+```bash
+# apt install arandr xrandr
+$ arandr
 
+$ vim $HOME/.config/i3/config
+exec_always xrandr config.sh
+```
 
-$vim $HOME/.config/i3/config
+__Poner o asignar nombre al EspacioDeTrabajo(workspace)__
+
+```bash
+$ vim $HOME/.config/i3/config
 set $workName "nombre"
 workspace --> name and move
+```
 
-$xprop
-assign [class="Firefox-esr"] $workName
-
-
+__Poner Iconos al titulo de los EspaciosDeTrabajo(workspace)__
 
 https://github.com/FortAwesome/Font-Awesome/releases
-$ wget reales.zip
-$ cd Descargas/Font-Awesome-5.0/fonts/
+
+```bash
+$ wget https://github.com/FortAwesome/Font-Awesome/releases/download/5.13.0/fontawesome-free-5.13.0-web.zip
+$ cd Descargas/Font-Awesome-5.13.0/fonts/
 $ mkdir $HOME/.fonts
-$ mv cd Descargas/Font-Awesome-5.0/fonts/*.ttf  $HOME/.fonts
+$ mv cd Descargas/Font-Awesome-5.13.0/fonts/*.ttf  $HOME/.fonts
 
-
-$vim $HOME/.config/i3/config
-set $workName "nombre LOGOFIREFOX"
-
-
-=============================================
-
-
+$ vim $HOME/.config/i3/config
+set $workName "Nombre LOGOFIREFOX"
+```

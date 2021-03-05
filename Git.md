@@ -11,7 +11,7 @@ $ git config user.email
 __Asignar Usuario y Correo__
 ```git
 $ git config --global user.name "Juan Fajardo"
-$ git config --global user.email "juanfajardo@potosi.bo"
+$ git config --global user.email "bett0@potosi.bo"
 ```
 
 __Listar__
@@ -64,6 +64,14 @@ __Remover un archivo del stage__
 ```git
 $ git checkout -- [Archivo]
 ```
+
+__Refresacar archivo Git Ignore__
+```git
+$ git rm -r --cached .
+$ git add .
+$ git commit -m "GitIgnore Refresacado" 
+```
+
 
 ## Eliminar
 __Del repositorio__
@@ -130,6 +138,24 @@ __Ver conexion remota__
 ```git
 $ git remote -v
 ```
+
+__Ver informacion__
+```git
+$ git config --list
+```
+
+
+__Ver Nombre__
+```git
+$ git config user.name
+```
+
+
+__Ver Correo__
+```git
+$ config user.name
+```
+
 
 __Agregar la conexion remota__
 ```git
@@ -234,9 +260,39 @@ $ git mergetool
 
 
 ## DESCARGAR CAMBIOS (PULL)
-__Origin__
+
 ```git
 $ git pull origin [Rama]
 $ git pull origin [Rama] --allow-unrelated-historie
 ```
 
+
+## Conexion SSH 
+
+__Crear la conexion__
+```bash
+$ ssh-keygen
+```
+
+__Agregar Clave de SSH__
+```bash
+$ cat ~/.ssh/id_rsa.pub
+```
+__Copiar aqui__
+
+https://github.com/settings/keys
+
+__Crear el agente__
+```bash
+$ eval `ssh-agent -s`
+```
+
+__Agregar la conexion__
+```bash
+$ ssh-add id_rsa
+```
+
+__Test de conexion__
+```bash
+$ ssh -T git@github.com
+```
