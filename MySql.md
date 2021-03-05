@@ -90,6 +90,8 @@ __Resetear contraseña de mysql Windows__
 
 ```$ mysqld_safe --skip-grant-tables &```
 
+```$ mysqld --skip-grant-tables &```
+
 ```$ mysql -u root mysql```
 
 ```> update user SET password=PASSWORD("123") WHERE user="root"; $ FLUSH PRIVILEGES;```
