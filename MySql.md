@@ -90,6 +90,8 @@ __Resetear contraseña de mysql Windows__
 
 ```$ mysqld_safe --skip-grant-tables &```
 
+```$ mysqld --skip-grant-tables &```
+
 ```$ mysql -u root mysql```
 
 ```> update user SET password=PASSWORD("123") WHERE user="root"; $ FLUSH PRIVILEGES;```
@@ -115,3 +117,24 @@ __Aria engine is not enabled...__
 ```$ cd /var/lib/mysql```
 
 ```$ mv aria_log_control aria_log_control.moved```
+
+
+## Mysql Servidor no levanta(estamos fregados - MySQL (MariaDB) Not Starting [closed])
+
+```bash
+# cd /var/lib/mysql
+
+# ls
+
+# rm -r *
+
+# mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+
+# systemctl start mysqld
+
+# systemctl start mysql.service
+
+# systemctl start mariadb
+
+# mysql
+```
