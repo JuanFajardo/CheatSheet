@@ -25,10 +25,10 @@ postgres@localhost$ pg_dump -U bett0 -W -h loclahost baseDatos > /tmp/baseDatos.
 postgres@localhost$ pg_dump -U bett0 -W -h 192.168.69.69 --table public.tabla baseDatos > /tmp/baseDatos.sql
 ```
 
+__Exportar Una Tabla__
 
-__Exportar Todas BaseDeDatos__
 ```bash
-postgres@localhost$ pg_dumpall -U postgres > pg_todo.sql
+pg_dump --host localhost --port 5432 --username postgres --format plain --verbose --file "<abstract_file_path>" --table public.tablename dbname                                                               
 ```
 
 __Importar BaseDeDatos__
