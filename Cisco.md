@@ -1,3 +1,4 @@
+67724504
 # Comandos de IOS Cisco
 
 > switch> Modo exec usuario

@@ -1,0 +1,4 @@
+apt install git build-essential libx11-dev libxft-dev libxinerama-dev
+apt install xinit xorg
+apt install libx11-xcb-dev
+apt install libx11-res0-dev

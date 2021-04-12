@@ -8,7 +8,7 @@
 ## Programas basicos
 
 ```bash
-# apt isntall -y git tmux vim curl wget zip unzip 
+# apt isntall -y git tmux vim curl wget zip unzip
 ```
 _
 
@@ -18,7 +18,7 @@ _
 __Instalacion NGINX__
 
 ```bash
-# apt install ngnix php-fpm 
+# apt install ngnix php-fpm
 ```
 __Instalacion Apache__
 
@@ -108,7 +108,7 @@ $ composer -v
 __Instalacion directa__
 
 ```bash
-# php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --finame=composer 
+# php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --finame=composer
 ```
 
 
@@ -317,3 +317,13 @@ __Aliases__
 __Link__
 
   https://laravelcollective.com/docs/5.2/html
+
+
+
+  php artisan make:seeder CursoSeeder
+  $this->call(CursoSeeder::class);
+
+  use App\Models\Curso;
+
+  php artisan make:factory CursoFactory --model=Curso
+  Curso::factory(50)->create();
