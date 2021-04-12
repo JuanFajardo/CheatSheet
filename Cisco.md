@@ -224,10 +224,20 @@ ROUTER(confi)# ip address 192.168.116.1 255.2555.255.0
 ROUTER(confi)# ip helper-address 192.168.116.1
 
 ROUTER(confi)# 
-
 ```
 
 
+## Comandos para detectar la red
+```bash
+switch# show vlans
+
+switch# show ip interface brief
+
+switch# show mac address-table address
+
+switch# show cdp neighbor
+switch# show cdp neighbor detail
+```
 
 
 
