@@ -1,5 +1,8 @@
 # Tuneando la Shell
 
+ $pdftk *.pdf cat output salida.pdf
+
+
 __Instalar PowerLine-Shell__
 [https://github.com/b-ryan/powerline-shel](https://github.com/b-ryan/powerline-shell "PowerLine Shell")
 
