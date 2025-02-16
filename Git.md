@@ -1,91 +1,124 @@
 # Git
 
+## Creando Repositorio
 
-__Ver usuario y correo__
-```git
-$ git config user.name
-$ git config user.email
+### Inicio 
+```bash
+git init
+git add --all
+git commit -m "build: commit inicial"
+git add origin hthttps://github.com/JuanFajardo/CheatSheet
+git push -u origin main
+```
+
+### Commit normal
+```bash
+git add .
+git commit -m "build: mensaje del commit"
+git psuh -u origin main
+```
+
+### Commit vacio
+```bash
+git commit --allow-empty -m "chore: commit vacio"
+git psuh -u origin main
 ```
 
 
-__Asignar Usuario y Correo__
-```git
-$ git config --global user.name "Juan Fajardo"
-$ git config --global user.email "bett0@potosi.bo"
+
+## Ver Historial
+```bash
+git log
+git log --oneline
+git log -p <archivo>
+git blame <archivo>
 ```
 
-__Listar__
-```git
-$ git config -l
+
+## Usuarios
+
+### Ver usuario y correo
+```bash
+git config user.name
+git config user.email
+```
+
+### Asignar Usuario y Correo
+```bash
+git config --global user.name "Juan Fajardo"
+git config --global user.email "bett0@potosi.bo"
+```
+
+### Listar configuracion
+```bash
+git config -l
+```
+
+
+## DESCARGAR CAMBIOS (PULL)
+```bash
+git pull origin [Rama]
+
+#Permitir fusion
+git pull origin [Rama] --allow-unrelated-historie
 ```
 
 
 
-## ESTADO
+## Estado
 
-__Ver estado__
-```git
-$ git status
+### Estados
+```bash
+git status
+git status -s
+git status -b
 ```
 
-__Ver estado corto__
-```git
-$ git status -s
+
+
+
+
+
+## CABECERA
+
+### Agregar
+```bash
+# Agregar todo
+git add .
+
+# Agregar un archivo
+git add [File]
+
+# Agregar una carpeta
+git add Carpeta/Carpeta1/.
 ```
 
-__Ver estado de Rama__
-```git
-$ git status -b
+### Remover Eliminar
+
+## Remover
+```bash
+# Remover el ultimo commit
+git reset HEAD~1
+
+# Remover un archivo del head
+git reset HEAD [hash_commit]
+
+# Remover un archivo del stage
+git checkout -- [archivo]
+
+# Eliminar archivos recursvio de stage
+git rm -r --cached .
 ```
-
-## AGREGAR A CABECERA
-
-__Todo__
-```git
-$ git add .
-```
-
-__Un archivo__
-```git
-$ git add \[File\]
-```
-
-__Una carpeta__
-```git
-$ git add Carpeta/Carpeta1/.
-```
-
-__Remover de cabecera__
-```git
-$ git reset HEAD [Archivo]
-```
-
-__Remover un archivo del stage__
-```git
-$ git checkout -- [Archivo]
-```
-
-__Refresacar archivo Git Ignore__
-```git
-$ git rm -r --cached .
-$ git add .
-$ git commit -m "GitIgnore Refresacado" 
-```
-
 
 ## Eliminar
-__Del repositorio__
-```git
-$ git rm [Archivo]
-```
+```bash
+# Eliminar del repositorio
+git rm [Archivo]
 
-__Eliminar Recursivo__
-```git
-$ git rm -r [Carpeta]
-```
+# Eliminar Recursivo
+git rm -r [Carpeta]
 
-__Eliminar Forzado__
-```git
+# Eliminar Forzado
 $ git rm -f [Archivo]
 ```
 
@@ -93,38 +126,23 @@ $ git rm -f [Archivo]
 
 ## COMMIT
 
-__Commit Largo__
-```git
-$ git commit -m
-```
-
-__Commit Corto__
-```git
-$ git commit -m "Nombre - Mensaje"
-```
-
-__Listar los cambios__
-```git
-$ git log --oneline
-```
-
 __Cambiar el ultimo commit__
-```git
+```bash
 $ git commit --amend
 ```
 
 __Temporal__
-```git
+```bash
 $ git checkout 0d1d7fc32
 ```
 
 __Forzado__
-```git
+```bash
 $ git reset --hard 0d1d7fc32
 ```
 
 __Deshacer el ultimo commit__
-```git
+```bash
 $ git reset --soft HEAD~1
 $ git reset --merge
 ```
@@ -135,35 +153,35 @@ $ git reset --merge
 ## CONEXION REMOTA
 
 __Ver conexion remota__
-```git
+```bash
 $ git remote -v
 ```
 
 __Ver informacion__
-```git
+```bash
 $ git config --list
 ```
 
 
 __Ver Nombre__
-```git
+```bash
 $ git config user.name
 ```
 
 
 __Ver Correo__
-```git
+```bash
 $ config user.name
 ```
 
 
 __Agregar la conexion remota__
-```git
+```bash
 $ git remote add origin ssh://bett0@192.168.1.109:/home/bett0/Sistema/
 ```
 
 __Cambiar la conexion remota__
-```git
+```bash
 $ git remote set-url origin ssh://bett0@192.168.1.109:/home/bett0/Sistema/
 ```
 
@@ -172,17 +190,17 @@ $ git remote set-url origin ssh://bett0@192.168.1.109:/home/bett0/Sistema/
 ## CAMBIOS DEL PROYECTO
 
 __Ver todo__
-```git
+```bash
 $ git diff [Archivo]
 ```
 
 __Ver un archivo__
-```git
+```bash
 $ git diff --name-only [Archivo]
 ```
 
 __Ver estado stage/head__
-```git
+```bash
 $ git diff --name-status [Archivo]
 ```
 
@@ -190,7 +208,7 @@ $ git diff --name-status [Archivo]
 ## ENVIAR CAMBIOS (PUSH)
 
 __Enviar cambios__
-```git
+```bash
 $ git push origin [Rama]
 ```
 
@@ -199,100 +217,131 @@ $ git push origin [Rama]
 
 ## RAMAS
 
-
-__Crear rama__
-```git
-$ git branch [Rama]
-```
-
-__Elminar rama sin perder nada__
-```git
-$ git branch -d [Rama]
-```
-
-__Elminar rama como macho alfa__
-```git
-$ git branch -D [Rama]
-```
-
-__Recolector de Basura__
-```git
-$ git gc
-```
-
-__Ver ramas__
-```git
-$ git branch
-```
-
-__Cambiando rama__
-```git
-$ git checkout [Rama]
-```
-
-
-## Fusionar/Merge
-
-__Simple con Rama__
-```git
-$ git merge [Rama]
-```
-
-__Simple con Master__
-```git
-$ git merge master
-```
-__Instalando Meld__
-```git
-$ PATH=$PATH:/c/python26
-$ git config --global merge.tool meld
-$ git config --global mergetool.meld.path /c/Users/andarno/Downloads/meld-1.5.2/bin/meld
-```
-
-__Ver la diferencia entre ramas__
-```git
-$ git difftool  [Rama]
-```
-__Merge con las modificaciones necesarias__
-```git
-$ git mergetool
-```
-
-
-## DESCARGAR CAMBIOS (PULL)
-
-```git
-$ git pull origin [Rama]
-$ git pull origin [Rama] --allow-unrelated-historie
-```
-
-
-## Conexion SSH 
-
-__Crear la conexion__
 ```bash
-$ ssh-keygen
+# Creando rama
+git branch [rama]
+
+# Elminar rama sin perder nada
+git branch -d [rama]
+
+# Elminar rama como macho alfa
+git branch -D [ramama]
+
+# Ver ramas
+git branch
+
+#Cambiando rama
+git checkout [rama]
+
+#Cambiar y crear una rama
+git checkout -b [rama]
 ```
 
-__Agregar Clave de SSH__
+
+## Garbage Collet
+### Recolector de Basura(Eliminar Basura)
 ```bash
-$ cat ~/.ssh/id_rsa.pub
+#Recolector normal
+git gc
+
+#Recolector optimizado
+git gc --aggressive
 ```
-__Copiar aqui__
 
-https://github.com/settings/keys
 
-__Crear el agente__
+## Merge
+
+### Fusion
 ```bash
-$ eval `ssh-agent -s`
+git merge [rama]
+
+# Simple con Master
+git merge master
+
+# Instalando Meld
+PATH=$PATH:/c/python26
+git config --global merge.tool meld
+git config --global mergetool.meld.path /c/Users/andarno/Downloads/meld-1.5.2/bin/meld
 ```
 
-__Agregar la conexion__
+### Diferencia
 ```bash
-$ ssh-add id_rsa
+# Ver la diferencia entre ramas
+git difftool  [Rama]
+
+#Merge con las modificaciones necesarias
+git mergetool
 ```
 
-__Test de conexion__
+
+
+
+## Conexion Remota
+
 ```bash
-$ ssh -T git@github.com
+# Generando el par de claves.
+ssh-keygen
+
+# Ver la clave publica
+# Copiar en
+# https://github.com/settings/keys
+cat ~/.ssh/id_rsa.pub
+
+# Crear el agente
+eval `ssh-agent -s`
+
+# Agregar la conexion
+ssh-add id_rsa
+
+# Test de conexion
+ssh -T git@github.com
 ```
+
+## Convencion Commit
+
+```bash
+#Nueva Funcionlidad: feat
+git commit -m "feat: add user authentication"
+
+#Correcion de error o bug: fix
+git commit -m "fix: resolve login issue on mobile"
+
+#Cambio en documentacion: docs
+git commit -m "docs: update README documentation"
+
+#Cambio con el formato: style
+git commit -m "style: format code with Prettier"
+
+#Cambio de mejora de estructura: refactor
+git commit -m "refactor: simplify user validation logic"
+
+#Agregacion de pruebas: test
+git commit -m "test: add unit tests for login service"
+
+#Cambios sin afectacion al codigo: chore
+git commit -m "chore: update dependencies"
+
+#Cambios que afectan al Sistema: build
+git commit -m "build: update webpack configuration"
+
+#Cambios en el CI/CD: ci
+git commit -m "ci: update GitHub Actions workflow"
+
+#Cambios para mejorar el rendimiento:perf
+git commit -m "perf: optimize image loading on homepage"
+
+#Desahcer algun commit 
+git commit -m "revert: revert commit 123abc"
+
+#Cambiso en el entorno virtual: env
+git commit -m "env: update staging environment variables"
+
+#Cambios en la configuracion:config
+git commit -m "config: update ESLint rules" 
+
+#Cambios o parches de seguridad:security
+git commit -m "security: fix XSS vulnerability"
+```
+
+
+
